@@ -1,5 +1,7 @@
 package fcl.telehealth360.model;
 
+import java.security.SecureRandom;
+
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,7 +17,20 @@ public class Patient {
   private String emailAddress;
   private String patientType; // first time or returning
   private byte[] patientCard;
+  
+  public static String generatePatientId() {
+        String companyLabel = "TH/LG/";
+        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        SecureRandom secureRandom = new SecureRandom();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < 8; i++) {
+            int randomIndex = secureRandom.nextInt(characters.length());
+                        sb.append(characters.charAt(randomIndex));
+        }
+        return companyLabel.concat(sb.toString());
+    }
 }
+
 
 // patient -> medical history [one / many]
 

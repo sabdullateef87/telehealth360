@@ -1,4 +1,4 @@
-package fcl.telehealth360.service;
+package fcl.telehealth360.service.impl;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;

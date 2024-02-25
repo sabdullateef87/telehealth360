@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class Telehealth360Application {
-
 	public static void main(String[] args) {
 		SpringApplication.run(Telehealth360Application.class, args);
 	}

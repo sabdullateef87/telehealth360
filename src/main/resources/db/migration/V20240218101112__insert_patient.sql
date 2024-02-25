@@ -11,7 +11,7 @@ BEGIN
     INSERT INTO patients (name, age, mobile_number, email_address, patient_type)
     VALUES (p_name, p_age, p_mobile_number, p_email_address, p_patient_type);
 
-    SELECT * FROM patients WHERE patient_id = LAST_INSERT_ID();
+    SELECT * FROM patients WHERE email_address = p_email_address LIMIT 1;
 
 
 END//
